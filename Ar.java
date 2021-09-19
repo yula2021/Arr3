@@ -60,5 +60,16 @@ public class Ar {
                 Arr[i][j] = i + 1 + j * numCols; //ошибка
         System.out.println(Arr);
     }
+//вывод массива змейкой
+public static void fillOrderSnake() {
+    for (int i = 0; i < numRols; i++) {
+        if (i % 2 == 0)
+            for (int j = 0; j < numCols; j++)
+                Arr[i][j] = i * numCols + j + 1;
+        else
+            for (int j = numCols - 1; j >= 0; j--)
+                Arr[i][j] = i * numCols + (numCols - j);
+    }
 
+}
 }
